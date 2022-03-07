@@ -1,0 +1,24 @@
+<div class="search-form">
+    <label id="searchLabel" for="searchInput">
+        <span class="fas fa-search search-icon"></span>
+    </label>
+    <form action="[% c.uri_for(c.controller('Recipes').action_for('search')) %]">
+        <input id="searchInput"
+               name="q"
+               placeholder="Nach Rezepten suchen..."
+               title="Nach Rezepten suchen..."
+               required />
+    </form>
+</div>
+
+<script>
+(function(){
+    document.getElementById("searchLabel").onclick = function() {
+        document.getElementById("header").classList.add("search-focused");
+    }
+
+    document.getElementById("searchInput").onblur = function() {
+        document.getElementById("header").classList.remove("search-focused");
+    }
+}());
+</script>

@@ -1,0 +1,17 @@
+<div class="sub-header">
+    <span>[% categories.size %] Kategorien</span>
+    <div class="sub-header-title"><i class="fas fa-clone"></i> Kategorien</div>
+    <span></span>
+</div>
+
+[% IF categories.size > 0 %]
+    [% FOREACH tag IN categories.sort("name") %]
+        <a href="[% c.uri_for(c.controller('Recipes').action_for('index'), { 'category' => category.name }) %]">
+            [% FILTER html %]
+                [% category.name %]
+            [% END %]
+        </a>
+    [% END %]
+[% ELSE %]
+    <div class="empty-list">Keine Kategorien gefunden</div>
+[% END %]

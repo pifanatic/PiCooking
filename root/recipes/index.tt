@@ -1,0 +1,34 @@
+<div class="sub-header">
+    <span>[% recipes.size %] Rezepte</span>
+
+    <div class="sub-header-title">
+        [% IF category %]
+            [% FILTER html %]
+                [% category %]
+            [% END %]
+        [% ELSE %]
+            Alle Rezepte
+        [% END %]
+    </div>
+
+    <div class="sub-header-right">
+        [% IF category %]
+            <a class="sub-header-link"
+               href="[% c.uri_for(c.controller('Recipes').action_for('index')) %]">
+                Alle Rezepte anzeigen
+            </a>
+        [% END %]
+
+        <a class="btn btn-primary"
+           href="[% c.uri_for(c.controller('Recipes').action_for('add')) %]">
+           <span class="fas fa-plus"></span>
+           Neues Rezept anlegen
+        </a>
+    </div>
+</div>
+
+[% IF recipes.size > 0 %]
+    [% INCLUDE recipes/recipe_list.tt %]
+[% ELSE %]
+    <div class="empty-list">Du hast noch keine Rezepte angelegt.</div>
+[% END %]

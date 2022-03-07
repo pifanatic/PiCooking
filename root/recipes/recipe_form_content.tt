@@ -1,0 +1,18 @@
+<label for="title">Titel</label>
+<input id="title" name="title" value="[% recipe.title %]"required/>
+
+<section>
+    <h2>Zutaten</h2>
+    <textarea id="ingredients-input" name="ingredients" rows="10" placeholder="Trage hier die Zutaten ein..." required>[% recipe.ingredients %]</textarea>
+</section>
+
+<section>
+    <h2>Zubereitung</h2>
+    <textarea id="instructions-input" name="instructions" rows="10" placeholder="Trage hier ein, wie das Rezept zubereitet wird..." required>[% recipe.instructions %]</textarea>
+</section>
+
+
+<section>
+    <label for="categories">Kategorien</label>
+    <input id="categories" name="categories" value="[% categories %]"/>
+</section>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de-DE">
+<head>
+    <title>Mein Kochbuch</title>
+    <link rel="icon" href="/static/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous&amp;display=swap"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="[% c.uri_for('/static/styles.css') %]"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#DD0000"/>
+</head>
+
+<body>
+    <header id="header">
+        [% IF c.user_exists %]
+            <nav class="header-left-desktop">
+                [% INCLUDE navigation_items.tt %]
+            </nav>
+
+            <div class="header-left-mobile">
+                <details>
+                    <summary>
+                        <i class="fas fa-bars"></i>
+                    </summary>
+                    <nav>
+                        [% INCLUDE navigation_items.tt %]
+                    </nav>
+                </details>
+            </div>
+        [% END %]
+        <div class="header-center">
+            <a class="app-title"
+               href="[% c.uri_for(c.controller('Root').action_for('index')) %]">
+               Mein Kochbuch
+            </a>
+        </div>
+        [% IF c.user_exists %]
+            <div class="header-right">
+                [% INCLUDE recipes/search_form.tt %]
+
+                <a class="header-item"
+                   href="[% c.uri_for(c.controller('Logout').action_for('index')) %]">
+                   <span class="logout-text">Ausloggen</span>
+                   <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+        [% END %]
+    </header>
+
+    <main>
+        [% content %]
+    </main>
+
+    [% IF error_msg %]
+        <div class="notification error">
+            <div class="notification-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            [% FILTER html %]
+                [% error_msg %]
+            [% END %]
+        </div>
+    [% ELSIF status_msg %]
+        <div class="notification success">
+            <div class="notification-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            [% FILTER html %]
+                [% status_msg %]
+            [% END %]
+        </div>
+    [% END %]
+</body>
+
+</html>

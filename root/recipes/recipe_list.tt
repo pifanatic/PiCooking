@@ -1,0 +1,22 @@
+<div id="list" class="list">
+    [% FOREACH recipe IN recipes %]
+        <div class="list-item">
+            <div>
+                [% FILTER html %]
+                    [% recipe.title %]
+                [% END %]
+            </div>
+            <div>
+                [% FOREACH category IN recipe.categories %]
+                    <span class="category">
+                        <a href="[% c.uri_for(c.controller('Recipes').action_for('index'), { 'category' => category.name }) %]">
+                            [% FILTER html %]
+                                [% category.name %]
+                            [% END %]
+                        </a>
+                    </span>
+                [% END %]
+            </div>
+        </div>
+    [% END %]
+</div>

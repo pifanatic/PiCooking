@@ -1,0 +1,12 @@
+<a class="nav-item" href="[% c.uri_for(c.controller('Recipes').action_for('index')) %]">
+    <i class="far fa-book nav-item-icon"></i>
+    <span class="nav-item-text">Rezepte</span>
+</a>
+<a class="nav-item" href="[% c.uri_for(c.controller('Categories').action_for('index')) %]">
+    <i class="far fa-clone nav-item-icon"></i>
+    <span class="nav-item-text">Kategorien</span>
+</a>
+<a class="nav-item" href="[% c.uri_for(c.controller('Trash').action_for('index')) %]">
+    <i class="fas fa-trash-alt nav-item-icon"></i>
+    <span class="nav-item-text">Papierkorb</span>
+</a>

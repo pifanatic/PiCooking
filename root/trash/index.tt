@@ -1,0 +1,20 @@
+<div class="sub-header">
+    <span>[% recipes.size %] Rezepte</span>
+    <div class="sub-header-title"><i class="fas fa-trash"></i> Papierkorb</div>
+
+    <div class="sub-header-right">
+        [% IF recipes.size > 0 %]
+            <a class="btn btn-primary"
+               href="[% c.uri_for(c.controller.action_for('empty')) %]">
+               <span class="fas fa-trash-alt"></span>
+               Papierkorb leeren
+            </a>
+        [% END %]
+    </div>
+</div>
+
+[% IF recipes.size > 0 %]
+    [% INCLUDE recipes/recipe_list.tt %]
+[% ELSE %]
+    <div class="empty-list">Papierkorb ist leer</div>
+[% END %]

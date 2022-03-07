@@ -1,0 +1,13 @@
+<div class="sub-header">
+    <span>[% recipes.size %] Rezepte für "[% query %]" gefunden</span>
+
+    <div class="sub-header-title">Suchergebnis</div>
+
+    <span></span>
+</div>
+
+[% IF recipes.size > 0 %]
+    [% INCLUDE recipes/recipe_list.tt %]
+[% ELSE %]
+    <div class="empty-list">Keine Rezepte gefunden</div>
+[% END %]

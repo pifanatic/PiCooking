@@ -1,0 +1,15 @@
+<div class="sub-header">
+    <div class="sub-header-title">
+        Neues Rezept anlegen
+    </div>
+</div>
+
+<form id="recipeForm" method="post">
+    [% INCLUDE recipes/recipe_form_content.tt %]
+
+    <div class="button-row">
+        <button class="submit-button btn btn-primary">
+            Speichern
+        </button>
+    </div>
+</form>

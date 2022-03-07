@@ -1,0 +1,19 @@
+<div class="sub-header">
+    <div class="sub-header-title">Einloggen</div>
+</div>
+
+<div class="login-wrapper overlay">
+    <form method="post">
+        <div class="row">
+            <label for="username">Benutzername</label>
+            <input id="username" name="username" required/>
+        </div>
+
+        <div class="row">
+            <label for="password">Passwort</label>
+            <input id="password" name="password" type="password" required/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Einloggen</button>
+    </form>
+</div>
