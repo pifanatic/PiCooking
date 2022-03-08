@@ -239,7 +239,7 @@ sub restore : Chained("get_recipe_by_id") Args(0) {
     } else {
         $c->stash->{recipe}->update({ in_trash => 0 });
 
-        my $status_msg = "'" . $c->stash->{card}->title .
+        my $status_msg = "'" . $c->stash->{recipe}->title .
                          "' wurde wiederhergestellt!";
 
         $c->response->redirect(
