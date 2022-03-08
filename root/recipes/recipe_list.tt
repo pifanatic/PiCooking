@@ -1,20 +1,18 @@
-<div id="list" class="list">
+<div id="list" class="list overlay">
     [% FOREACH recipe IN recipes %]
         <div class="list-item">
-            <div>
+            <div class="title">
                 [% FILTER html %]
                     [% recipe.title %]
                 [% END %]
             </div>
-            <div>
+            <div class="categories">
                 [% FOREACH category IN recipe.categories %]
-                    <span class="category">
-                        <a href="[% c.uri_for(c.controller('Recipes').action_for('index'), { 'category' => category.name }) %]">
-                            [% FILTER html %]
-                                [% category.name %]
-                            [% END %]
-                        </a>
-                    </span>
+                    <a href="[% c.uri_for(c.controller('Recipes').action_for('index'), { 'category' => category.name }) %]" class="category">
+                        [% FILTER html %]
+                            [% category.name %]
+                        [% END %]
+                    </a>
                 [% END %]
             </div>
         </div>
