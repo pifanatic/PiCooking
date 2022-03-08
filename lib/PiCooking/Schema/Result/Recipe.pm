@@ -143,7 +143,7 @@ __PACKAGE__->belongs_to(
 # Created by DBIx::Class::Schema::Loader v0.07049 @ 2022-03-07 16:00:17
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:rIWNWmSd1NeqThqAGlRl5Q
 
+__PACKAGE__->many_to_many("categories", "recipes_categories", "category");
 
-# You can replace this text with custom code or comments, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;
 1;
