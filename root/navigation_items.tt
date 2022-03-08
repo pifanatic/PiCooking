@@ -1,5 +1,5 @@
 <a class="nav-item" href="[% c.uri_for(c.controller('Recipes').action_for('index')) %]">
-    <i class="far fa-book nav-item-icon"></i>
+    <i class="fas fa-book nav-item-icon"></i>
     <span class="nav-item-text">Rezepte</span>
 </a>
 <a class="nav-item" href="[% c.uri_for(c.controller('Categories').action_for('index')) %]">
