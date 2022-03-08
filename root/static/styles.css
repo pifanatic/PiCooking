@@ -460,6 +460,7 @@ header .nav-item .nav-item-icon {
 }
 
 .list-item .title {
+    display: flex;
     font-size: 1.2em;
     flex: 5;
 }
@@ -474,4 +475,8 @@ header .nav-item .nav-item-icon {
 .list-item a.category {
     color: #777;
     margin: 0.1em;
+}
+
+.list-item a:hover {
+    transform: scale(1.1);
 }
