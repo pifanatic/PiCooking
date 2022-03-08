@@ -4,12 +4,18 @@
     </div>
 </div>
 
-<form id="recipeForm" method="post">
-    [% INCLUDE recipes/recipe_form_content.tt %]
+<div class="overlay add-overlay">
+    <form id="recipeForm" method="post">
+        [% INCLUDE recipes/recipe_form_content.tt %]
 
-    <div class="button-row">
-        <button class="submit-button btn btn-primary">
-            Speichern
-        </button>
-    </div>
-</form>
+        <section class="button-row">
+            <a class="btn"
+               href="[% c.uri_for(c.controller.action_for('index')) %]">
+               Abbrechen
+            </a>
+            <button class="btn btn-primary">
+                Speichern
+            </button>
+        </section>
+    </form>
+</div>
