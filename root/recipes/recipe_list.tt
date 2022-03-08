@@ -2,9 +2,11 @@
     [% FOREACH recipe IN recipes %]
         <div class="list-item">
             <div class="title">
-                [% FILTER html %]
-                    [% recipe.title %]
-                [% END %]
+                <a href="[% c.uri_for(c.controller('Recipes').action_for('view'), [ recipe.id ]) %]">
+                    [% FILTER html %]
+                        [% recipe.title %]
+                    [% END %]
+                </a>
             </div>
             <div class="categories">
                 [% FOREACH category IN recipe.categories %]
