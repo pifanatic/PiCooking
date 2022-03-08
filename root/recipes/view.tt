@@ -50,7 +50,7 @@
 <div class="overlay view-overlay">
     <section>
         <h2>Zutaten</h2>
-        <p>[% FILTER html %]
+        <p class="formatted">[% FILTER html %]
                 [% recipe.ingredients %]
             [% END %]
         </p>
@@ -58,8 +58,21 @@
 
     <section>
         <h2>Zubereitung</h2>
-        <p>[% FILTER html %]
+        <p class="formatted">[% FILTER html %]
                 [% recipe.instructions %]
+            [% END %]
+        </p>
+    </section>
+
+    <section>
+        <h2>Kategorien</h2>
+        <p>
+            [% FOREACH category IN recipe.categories %]
+                <a href="[% c.uri_for(c.controller('Recipes').action_for('index'), { 'category' => category.name }) %]" class="category">
+                    [% FILTER html %]
+                        [% category.name %]
+                    [% END %]
+                </a>
             [% END %]
         </p>
     </section>

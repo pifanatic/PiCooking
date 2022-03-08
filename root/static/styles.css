@@ -472,7 +472,7 @@ header .nav-item .nav-item-icon {
     text-align: center;
 }
 
-.list-item a.category {
+a.category {
     color: #777;
     margin: 0.1em;
 }
@@ -487,8 +487,17 @@ header .nav-item .nav-item-icon {
     margin-bottom: 20px;
 }
 
-.view-overlay p {
+.view-overlay p.formatted {
     font-family: 'Roboto';
     line-height: 1.5em;
     white-space: pre-line;
+}
+
+.view-overlay a.category {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.view-overlay a.category:hover {
+    transform: scale(1.1);
 }
