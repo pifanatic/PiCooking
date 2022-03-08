@@ -33,5 +33,10 @@
 
 <section>
     <h2>Kategorien</h2>
-    <input id="categories" name="categories" value="[% categories %]"/>
+    <textarea
+        id="categories"
+        name="categories"
+        placeholder="Trage hier die Kategorien des Rezeptes ein..."
+        rows="5"
+    >[% categories %]</textarea>
 </section>

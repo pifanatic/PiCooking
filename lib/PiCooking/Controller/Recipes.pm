@@ -68,7 +68,7 @@ sub add : Local Args(0) {
             title        => $c->req->params->{title},
             ingredients  => $c->req->params->{ingredients},
             instructions => $c->req->params->{instructions},
-            categories   => [split " ", $c->req->params->{categories} ],
+            categories   => [split "\r\n", $c->req->params->{categories} ],
             user_id      => $c->user->id
         });
 
@@ -136,7 +136,7 @@ sub edit : Chained("get_recipe_by_id") Args(0) {
                 title        => $c->req->params->{title},
                 ingredients  => $c->req->params->{ingredients},
                 instructions => $c->req->params->{instructions},
-                categories   => [ split " ", $c->req->params->{categories} ],
+                categories   => [ split "\r\n", $c->req->params->{categories} ],
                 user_id      => $c->user->id
             }
         );
@@ -156,7 +156,7 @@ sub edit : Chained("get_recipe_by_id") Args(0) {
     }
 
     $c->stash({
-        categories => join(" ", map { $_->name } $c->stash->{recipe}->categories)
+        categories => join("\n", map { $_->name } $c->stash->{recipe}->categories)
     });
 }
 
