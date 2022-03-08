@@ -480,3 +480,15 @@ header .nav-item .nav-item-icon {
 .list-item a:hover {
     transform: scale(1.1);
 }
+
+.view-overlay {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.view-overlay p {
+    font-family: 'Roboto';
+    line-height: 1.5em;
+    white-space: pre-line;
+}

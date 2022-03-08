@@ -47,20 +47,20 @@
     </div>
 </div>
 
-<section>
-    <h2>Zutaten</h2>
-    <p>
-        [% FILTER html %]
-            [% recipe.ingredients %]
-        [% END %]
-    </p>
-</section>
+<div class="overlay view-overlay">
+    <section>
+        <h2>Zutaten</h2>
+        <p>[% FILTER html %]
+                [% recipe.ingredients %]
+            [% END %]
+        </p>
+    </section>
 
-<section>
-    <h2>Zubereitung</h2>
-    <p>
-        [% FILTER html %]
-            [% recipe.instructions %]
-        [% END %]
-    </p>
-</section>
+    <section>
+        <h2>Zubereitung</h2>
+        <p>[% FILTER html %]
+                [% recipe.instructions %]
+            [% END %]
+        </p>
+    </section>
+</div>
