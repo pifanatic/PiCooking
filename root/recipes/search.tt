@@ -1,5 +1,5 @@
 <div class="sub-header">
-    <span>[% recipes.size %] Rezepte für "[% query %]" gefunden</span>
+    <span>[% recipes.size %] Rezepte f&uuml;r "[% query %]" gefunden</span>
 
     <div class="sub-header-title">Suchergebnis</div>
 

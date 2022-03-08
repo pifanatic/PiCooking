@@ -1,7 +1,7 @@
 package PiCooking::Controller::Recipes;
 use Moose;
 use namespace::autoclean;
-
+use utf8;
 use DateTime;
 
 =head1 NAME

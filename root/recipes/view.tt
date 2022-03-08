@@ -8,7 +8,7 @@
         <a class="sub-header-link"
            href="[% back_link %]">
            <i class="fas fa-arrow-left"></i>
-           Zurück
+           Zur&uuml;ck
         </a>
     </div>
 
@@ -41,7 +41,7 @@
             <a class="btn btn-red"
                href="[% c.uri_for(c.controller.action_for("delete"), [recipe.id]) %]">
                <i class="fas fa-trash-alt"></i>
-               Löschen
+               L&ouml;schen
             </a>
         [% END %]
     </div>
