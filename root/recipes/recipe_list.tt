@@ -1,5 +1,5 @@
 <div id="list" class="list overlay">
-    [% FOREACH recipe IN recipes %]
+    [% FOREACH recipe IN recipes.sort("title") %]
         <div class="list-item">
             <div class="title">
                 <a href="[% c.uri_for(c.controller('Recipes').action_for('view'), [ recipe.id ]) %]">
