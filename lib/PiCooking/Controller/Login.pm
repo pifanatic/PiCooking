@@ -48,11 +48,11 @@ sub index : Path Args(0) {
 
         if (!$username || !$password) {
             $c->res->status(400);
-            return $c->stash({ error_msg => "Username and password required." });
+            return $c->stash({ error_msg => "Bitte Benutzernamen und Passwort eingeben." });
         }
 
         if (!$c->authenticate({ username => $username, password => $password })) {
-            return $c->stash({ error_msg => "Incorrect username or password." });
+            return $c->stash({ error_msg => "Benutzername oder Passwort falsch." });
         }
 
         $c->response->redirect(
