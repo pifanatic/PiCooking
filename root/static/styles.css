@@ -82,7 +82,7 @@ header {
     display: flex;
     align-items: center;
     height: 60px;
-    padding: 0 40px;
+    padding: 0 20px;
 
     font-size: 30px;
 
@@ -168,7 +168,7 @@ header .header-left-mobile nav .nav-item:not(:last-child) {
 }
 
 header .header-center {
-    flex: 1;
+    flex: 2;
     text-align: center;
 }
 
@@ -183,12 +183,7 @@ header .header-right {
 }
 
 header .app-title {
-    margin: 0 20px;
     color: white;
-}
-
-header .header-right .search-form {
-    margin-right: 100px;
 }
 
 @media (max-width: 1000px) {
