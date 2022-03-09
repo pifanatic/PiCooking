@@ -384,6 +384,58 @@ header .nav-item .nav-item-icon {
     font-size: 25px;
 }
 
+/* Home */
+section.home {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px 0px #aaa;
+    transform: translateY(0px);
+    transition: transform 0.3s;
+    text-align: center;
+    margin: 20px 50px;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+.tile .icon {
+    display: flex;
+    flex: 3;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile .counter {
+    font-size: 72px;
+    color: darkgrey;
+}
+
+.tile .text {
+    flex: 2;
+    font-size: 24px;
+}
+
+.tile .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
 /* Search form */
 .search-form {
     display: flex;

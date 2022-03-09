@@ -45,7 +45,23 @@ The welcome screen of the application
 
 =cut
 
-sub index : Path Args(0) {}
+sub index : Path Args(0) {
+    my ($self, $c) = @_;
+
+    my $recipe_count = $c->model("DB::Recipe")->search({
+        user_id  => $c->user->id,
+        in_trash => 0
+    })->count;
+
+    my $category_count = $c->model("DB::Category")->search({
+        user_id => $c->user->id
+    })->count;
+
+    $c->stash({
+        recipe_count   => $recipe_count,
+        category_count => $category_count
+    });
+}
 
 
 =head2 default

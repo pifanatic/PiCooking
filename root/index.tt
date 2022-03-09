@@ -1,1 +1,29 @@
 <h1>Willkommen in deinem Kochbuch</h1>
+
+<section class="home">
+    <div class="tile">
+        <div class="icon">
+            <span class="counter">[% recipe_count %]</span>
+        </div>
+        <div class="text">Rezepte sind in deinem Kochbuch!</div>
+        <div class="link">
+            <a class="btn btn-primary" href="[% c.uri_for(c.controller('Recipes').action_for('index')) %]">
+                <span class="fas fa-book"></span>
+                Zu den Rezepten
+            </a>
+        </div>
+    </div>
+
+    <div class="tile">
+        <div class="icon">
+            <span class="counter">[% category_count %]</span>
+        </div>
+        <div class="text">Kategorien hast du bisher erstellt!</div>
+        <div class="link">
+            <a class="btn btn-primary" href="[% c.uri_for(c.controller('Categories').action_for('index')) %]">
+                <span class="far fa-clone"></span>
+                Zu den Kategorien
+            </a>
+        </div>
+    </div>
+</section>
