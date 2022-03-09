@@ -4,8 +4,8 @@
     <span></span>
 </div>
 
-<div id="list" class="list overlay">
-    [% IF categories.size > 0 %]
+[% IF categories.size > 0 %]
+    <div id="list" class="list overlay">
         [% FOREACH category IN categories.sort("name") %]
             <div class="list-item">
                 <div class="main">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         [% END %]
-    [% ELSE %]
-        <div class="empty-list">Keine Kategorien gefunden</div>
-    [% END %]
-</div>
+    </div>
+[% ELSE %]
+    <div class="empty-list">Keine Kategorien gefunden</div>
+[% END %]
