@@ -485,20 +485,21 @@ header .nav-item .nav-item-icon {
     border-bottom: 1px solid #ddd;
 }
 
-.list-item .title {
+.list-item .main {
     display: flex;
     font-size: 1.2em;
     flex: 5;
 }
 
-.list-item .categories {
+.list-item .secondary {
     display: flex;
     flex: 1;
     flex-direction: column;
     text-align: center;
 }
 
-a.category {
+a.category,
+.list-item .secondary * {
     color: #777;
     margin: 0.1em;
 }

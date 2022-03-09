@@ -8,15 +8,15 @@
     [% IF categories.size > 0 %]
         [% FOREACH category IN categories.sort("name") %]
             <div class="list-item">
-                <div class="title">
+                <div class="main">
                     <a href="[% c.uri_for(c.controller('Recipes').action_for('index'), { 'category' => category.name }) %]">
                         [% FILTER html %]
                             [% category.name %]
                         [% END %]
                     </a>
                 </div>
-                <div class="categories">
-                    <span class="category">
+                <div class="secondary">
+                    <span>
                         [% FILTER html %]
                             [% category.recipe_count %] Rezepte
                         [% END %]
