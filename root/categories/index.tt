@@ -4,14 +4,27 @@
     <span></span>
 </div>
 
-[% IF categories.size > 0 %]
-    [% FOREACH tag IN categories.sort("name") %]
-        <a href="[% c.uri_for(c.controller('Recipes').action_for('index'), { 'category' => category.name }) %]">
-            [% FILTER html %]
-                [% category.name %]
-            [% END %]
-        </a>
+<div id="list" class="list overlay">
+    [% IF categories.size > 0 %]
+        [% FOREACH category IN categories.sort("name") %]
+            <div class="list-item">
+                <div class="title">
+                    <a href="[% c.uri_for(c.controller('Recipes').action_for('index'), { 'category' => category.name }) %]">
+                        [% FILTER html %]
+                            [% category.name %]
+                        [% END %]
+                    </a>
+                </div>
+                <div class="categories">
+                    <span class="category">
+                        [% FILTER html %]
+                            [% category.recipe_count %] Rezepte
+                        [% END %]
+                    </span>
+                </div>
+            </div>
+        [% END %]
+    [% ELSE %]
+        <div class="empty-list">Keine Kategorien gefunden</div>
     [% END %]
-[% ELSE %]
-    <div class="empty-list">Keine Kategorien gefunden</div>
-[% END %]
+</div>

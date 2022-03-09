@@ -115,6 +115,27 @@ __PACKAGE__->belongs_to(
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:fO4zkiKUu4L0DwVwgvLw4g
 
 
+=head1 ADDITIONAL ACCESSORS
+
+=head2 recipe_count
+
+Number of recipes that have this category
+
+=cut
+
+has recipe_count => (
+    is      => "ro",
+    isa     => "Int",
+    lazy    => 1,
+    builder => "_build_recipe_count"
+);
+
+sub _build_recipe_count {
+    my ($self) = @_;
+
+    return $self->recipes->count;
+}
+
 __PACKAGE__->many_to_many("recipes", "recipes_categories", "recipe");
 
 __PACKAGE__->meta->make_immutable;
