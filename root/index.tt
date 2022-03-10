@@ -3,7 +3,7 @@
 <section class="home">
     <div class="tile">
         <div class="icon">
-            <span class="fas fa-plus counter"></span>
+            <span class="fas fa-plus"></span>
         </div>
         <div class="link">
             <a class="btn btn-primary" href="[% c.uri_for(c.controller('Recipes').action_for('add')) %]">
@@ -14,7 +14,7 @@
 
     <div class="tile">
         <div class="icon">
-            <span class="counter">[% recipe_count %]</span>
+            [% recipe_count %]
         </div>
         <div class="text">Rezepte sind in deinem Kochbuch!</div>
         <div class="link">
@@ -27,7 +27,7 @@
 
     <div class="tile">
         <div class="icon">
-            <span class="counter">[% category_count %]</span>
+            [% category_count %]
         </div>
         <div class="text">Kategorien hast du bisher erstellt!</div>
         <div class="link">
