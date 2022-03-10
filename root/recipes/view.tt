@@ -32,10 +32,10 @@
                Bearbeiten
             </a>
         [% ELSE %]
-            <a class="sub-header-link"
-               href="[% c.uri_for(c.controller.action_for("restore"), [recipe.id]) %]">
+            <a class="sub-header-icon-link"
+               href="[% c.uri_for(c.controller.action_for("restore"), [recipe.id]) %]"
+               title="Wiederherstellen">
                <i class="fas fa-trash-restore"></i>
-               Wiederherstellen
             </a>
 
             <a class="btn btn-red"
