@@ -3,6 +3,17 @@
 <section class="home">
     <div class="tile">
         <div class="icon">
+            <span class="fas fa-plus counter"></span>
+        </div>
+        <div class="link">
+            <a class="btn btn-primary" href="[% c.uri_for(c.controller('Recipes').action_for('add')) %]">
+                Neues Rezept anlegen
+            </a>
+        </div>
+    </div>
+
+    <div class="tile">
+        <div class="icon">
             <span class="counter">[% recipe_count %]</span>
         </div>
         <div class="text">Rezepte sind in deinem Kochbuch!</div>
