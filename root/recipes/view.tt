@@ -19,6 +19,13 @@
     </div>
 
     <div class="sub-header-right">
+        <a class="sub-header-icon-link"
+           href="#"
+           onclick="print()"
+           title="Drucken">
+           <i class="fas fa-print"></i>
+        </a>
+
         [% IF recipe.in_trash == 0 %]
             <a class="sub-header-icon-link"
                href="[% c.uri_for(c.controller.action_for("trash"), [recipe.id]) %]"
