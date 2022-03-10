@@ -78,14 +78,6 @@ a {
     box-shadow: 4px 4px 5px 0px #aaa;
 }
 
-@media print {
-    .overlay {
-        padding: 0px;
-        border: none;
-        box-shadow: none;
-    }
-}
-
 header {
     display: flex;
     align-items: center;
@@ -101,12 +93,6 @@ header {
 @media (max-width: 1000px) {
     header {
         padding: 0 15px;
-    }
-}
-
-@media print {
-    header {
-        display: none;
     }
 }
 
@@ -418,13 +404,6 @@ header .nav-item .nav-item-icon {
 
 .sub-header a.sub-header-icon-link-warning:hover {
     background-color: #ff7070;
-}
-
-@media print {
-    .sub-header .sub-header-right,
-    .sub-header .sub-header-left {
-        display: none;
-    }
 }
 
 .empty-list {

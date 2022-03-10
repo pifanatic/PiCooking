@@ -1,0 +1,14 @@
+header {
+    display: none;
+}
+
+.overlay {
+    padding: 0px;
+    border: none;
+    box-shadow: none;
+}
+
+.sub-header .sub-header-right,
+.sub-header .sub-header-left {
+    display: none;
+}
