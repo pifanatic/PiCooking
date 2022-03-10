@@ -5,10 +5,10 @@
         [% ELSE %]
             [% back_link = c.uri_for(c.controller('Recipes').action_for('index')) %]
         [% END %]
-        <a class="sub-header-link"
-           href="[% back_link %]">
+        <a class="sub-header-icon-link"
+           href="[% back_link %]"
+           title="Zur&uuml;ck">
            <i class="fas fa-arrow-left"></i>
-           Zur&uuml;ck
         </a>
     </div>
 
