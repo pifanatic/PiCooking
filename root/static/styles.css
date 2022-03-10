@@ -397,6 +397,15 @@ header .nav-item .nav-item-icon {
     background-color: #0080ff;
 }
 
+.sub-header a.sub-header-icon-link-warning {
+    background-color: red;
+    color: white;
+}
+
+.sub-header a.sub-header-icon-link-warning:hover {
+    background-color: #ff7070;
+}
+
 .empty-list {
     display: flex;
     justify-content: center;
