@@ -19,10 +19,10 @@
             </a>
         [% END %]
 
-        <a class="btn btn-primary"
-           href="[% c.uri_for(c.controller('Recipes').action_for('add')) %]">
+        <a class="sub-header-icon-link sub-header-icon-link-primary"
+           href="[% c.uri_for(c.controller('Recipes').action_for('add')) %]"
+           title="Neues Rezept anlegen">
            <span class="fas fa-plus"></span>
-           Neues Rezept anlegen
         </a>
     </div>
 </div>
