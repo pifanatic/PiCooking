@@ -71,7 +71,7 @@
         </p>
     </section>
 
-    <section>
+    <section id="categories">
         <h2>Kategorien</h2>
         <p>
             [% FOREACH category IN recipe.categories %]

@@ -12,3 +12,7 @@ header {
 .sub-header .sub-header-left {
     display: none;
 }
+
+section#categories {
+    display: none;
+}
