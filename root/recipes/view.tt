@@ -21,9 +21,9 @@
     <div class="sub-header-right">
         [% IF recipe.in_trash == 0 %]
             <a class="sub-header-link"
-               href="[% c.uri_for(c.controller.action_for("trash"), [recipe.id]) %]">
+               href="[% c.uri_for(c.controller.action_for("trash"), [recipe.id]) %]"
+               title="In den Papierkorb verschieben">
                <i class="fas fa-trash-alt"></i>
-               In den Papierkorb verschieben
             </a>
 
             <a class="btn btn-primary"
