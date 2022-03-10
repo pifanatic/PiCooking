@@ -1,4 +1,6 @@
-<h1>Willkommen in deinem Kochbuch</h1>
+<div class="sub-header">
+    <div class="sub-header-title">Willkommen in deinem Kochbuch</div>
+</div>
 
 <section class="home">
     <div class="tile">
