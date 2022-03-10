@@ -388,6 +388,15 @@ header .nav-item .nav-item-icon {
     transform: scale(1.05);
 }
 
+.sub-header a.sub-header-icon-link-primary {
+    background-color: #000080;
+    color: white;
+}
+
+.sub-header a.sub-header-icon-link-primary:hover {
+    background-color: #0080ff;
+}
+
 .empty-list {
     display: flex;
     justify-content: center;
