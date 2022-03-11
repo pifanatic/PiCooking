@@ -1,5 +1,13 @@
 <div class="sub-header">
-    <span>[% recipes.size %] Rezepte</span>
+    <span>
+        [% recipes.size %]
+
+        [% IF recipes.size == 1 %]
+            Rezept
+        [% ELSE %]
+            Rezepte
+        [% END %]
+    </span>
     <div class="sub-header-title"><i class="fas fa-trash-alt"></i> Papierkorb</div>
 
     <div class="sub-header-right">
