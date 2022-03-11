@@ -5,7 +5,7 @@
         [% ELSE %]
             [% back_link = c.uri_for(c.controller('Recipes').action_for('index')) %]
         [% END %]
-        <a class="sub-header-icon-link"
+        <a class="icon-link"
            href="[% back_link %]"
            title="Zur&uuml;ck">
            <i class="fas fa-arrow-left"></i>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="sub-header-right">
-        <a class="sub-header-icon-link"
+        <a class="icon-link"
            href="#"
            onclick="print()"
            title="Drucken">
@@ -27,25 +27,25 @@
         </a>
 
         [% IF recipe.in_trash == 0 %]
-            <a class="sub-header-icon-link"
+            <a class="icon-link"
                href="[% c.uri_for(c.controller.action_for("trash"), [recipe.id]) %]"
                title="In den Papierkorb verschieben">
                <i class="fas fa-trash-alt"></i>
             </a>
 
-            <a class="sub-header-icon-link sub-header-icon-link-primary"
+            <a class="icon-link icon-link-primary"
                href="[% c.uri_for(c.controller.action_for("edit"), [recipe.id]) %]"
                title="Bearbeiten">
                <i class="fas fa-pen-alt"></i>
             </a>
         [% ELSE %]
-            <a class="sub-header-icon-link"
+            <a class="icon-link"
                href="[% c.uri_for(c.controller.action_for("restore"), [recipe.id]) %]"
                title="Wiederherstellen">
                <i class="fas fa-trash-restore"></i>
             </a>
 
-            <a class="sub-header-icon-link sub-header-icon-link-warning"
+            <a class="icon-link icon-link-warning"
                href="[% c.uri_for(c.controller.action_for("delete"), [recipe.id]) %]"
                title="L&ouml;schen">
                <i class="fas fa-trash-alt"></i>

@@ -19,7 +19,7 @@
             </a>
         [% END %]
 
-        <a class="sub-header-icon-link sub-header-icon-link-primary"
+        <a class="icon-link icon-link-primary"
            href="[% c.uri_for(c.controller('Recipes').action_for('add')) %]"
            title="Neues Rezept anlegen">
            <span class="fas fa-plus"></span>
