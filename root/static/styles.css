@@ -620,3 +620,7 @@ a.category,
 .view-overlay a.category:hover {
     transform: scale(1.1);
 }
+
+.view-overlay section {
+    border-bottom: 1px solid #aaa;
+}
