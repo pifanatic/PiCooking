@@ -17,7 +17,13 @@
                 </div>
                 <div class="secondary">
                     <span>
-                        [% category.recipe_count %] Rezepte
+                        [% category.recipe_count %]
+
+                        [% IF category.recipe_count == 1 %]
+                            Rezept
+                        [% ELSE %]
+                            Rezepte
+                        [% END %]
                     </span>
                 </div>
             </div>
