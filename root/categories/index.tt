@@ -17,9 +17,7 @@
                 </div>
                 <div class="secondary">
                     <span>
-                        [% FILTER html %]
-                            [% category.recipe_count %] Rezepte
-                        [% END %]
+                        [% category.recipe_count %] Rezepte
                     </span>
                 </div>
             </div>
