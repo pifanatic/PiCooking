@@ -1,6 +1,6 @@
 <div class="sub-header">
     <span>[% categories.size %] Kategorien</span>
-    <div class="sub-header-title"><i class="fas fa-clone"></i> Kategorien</div>
+    <div class="sub-header-title"><i class="far fa-clone"></i> Kategorien</div>
     <span></span>
 </div>
 
