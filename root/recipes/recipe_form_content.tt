@@ -1,5 +1,5 @@
 <section>
-    <h2>Titel</h2>
+    <h2><span class="fas fa-tag h2-icon"></span>Titel</h2>
     <input
         id="title"
         name="title"
@@ -9,7 +9,7 @@
 </section>
 
 <section>
-    <h2>Zutaten</h2>
+    <h2><span class="far fa-list-alt h2-icon"></span>Zutaten</h2>
     <textarea
         id="ingredients-input"
         name="ingredients"
@@ -20,7 +20,7 @@
 </section>
 
 <section>
-    <h2>Zubereitung</h2>
+    <h2><span class="fas fa-hammer h2-icon"></span>Zubereitung</h2>
     <textarea
         id="instructions-input"
         name="instructions"
@@ -32,7 +32,7 @@
 
 
 <section>
-    <h2>Kategorien</h2>
+    <h2><span class="far fa-clone h2-icon"></span>Kategorien</h2>
     <textarea
         id="categories"
         name="categories"

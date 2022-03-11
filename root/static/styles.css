@@ -17,6 +17,11 @@ h1 {
     font-weight: normal;
 }
 
+.h2-icon {
+    color: #777;
+    margin-right: 0.5em;
+}
+
 a {
     text-decoration: none;
     color: initial;
