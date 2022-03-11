@@ -547,14 +547,13 @@ section.home {
     resize: none;
 }
 
-.add-overlay section:last-child {
-    margin-bottom: 20px;
+.add-overlay section {
+    margin-bottom: 50px;
 }
 
 .button-row {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
 }
 
 .button-row > * {
